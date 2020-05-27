@@ -148,7 +148,7 @@ def generateTrigDicts(): #This function would be pretty hefty to run, but not su
             secondDict[key] = value
 
 if __name__ == "__main__": #Main code
-    fileName = "C:\\Users\\lavee\\OneDrive\\Documents\\GitHub\\Projects\\Python\\locationInfo.txt" #Text file that holds the location info
+    fileName = "locationInfo.txt" #Text file that holds the location info
     #Text file is in the form
     with open(fileName, "r") as file:
         locationList = []
