@@ -1,0 +1,367 @@
+
+Number Representation
+Binary
+Denary
+Hexadecimal
+Number system
+twos complement
+ascii
+unicode
+binary coded decimal
+BCD
+
+Images
+Bitmap
+bitmapped
+pixel
+file header
+image resolution
+screen resolution
+vector graphic
+graphic
+drawing object
+property
+drawing list
+graphics software
+
+Sound
+Sampling
+sampling rate
+sampling resolution
+sound editing software
+sound editing
+
+Video
+frame rate
+frame-rate
+framerate
+interlaced
+progressive
+interframe compression
+spacial redundancy
+temporal redundancy
+spacial
+temporary
+multimedia container formats
+multimedia formats
+
+Compression Techniques
+lossless
+lossy
+run-length encoding
+run length encoding
+compression
+compressed
+
+Networks
+client-server model
+networked computers
+world wide web
+WWW
+internet
+networks
+routers
+gateways
+servers
+public switched telephone network
+PSTN
+dedicated lines
+circuit switched network
+cell phone network
+phone network
+mobile network
+copper cable
+fibre-optic cable
+copper cabling
+fibre-optic cabling
+radio waves
+radiowaves
+microwaves
+satellites
+satellite
+bit streaming
+bit-streaming
+real-time
+on-demand
+broadband speed
+bit rates
+
+IP addressing
+IP address
+public IP
+private IP
+public address
+private address
+IPv4
+IPv6
+Uniform Resource Locator
+URL
+domain name service
+DNS
+
+Client and server-side scripting
+javascript
+embedded client-side code
+client-side
+request
+server-side
+PHP
+scripting
+
+Input, output and storage devices
+hardware devices
+peripheral devices
+peripherals
+keyboard
+trackerball mouse
+optical mouse
+scanner
+printer
+3D printer
+speakers
+hard disk
+solid state
+flash memory
+optical disc
+optical discs
+microphone
+touchscreen
+secondary storage
+removable storage
+
+Main Memory
+RAM 
+ROM
+random access memory
+read only memory
+static RAM
+SRAM
+dynamic RAM
+DRAM
+
+Logic gates and logic circuits
+NAND
+NOR
+XOR
+EOR
+logic gate
+logic gates
+logic circuit
+NOT gate
+AND gate
+OR gate
+logic expression
+truth table
+
+CPU architecture
+Von Neumann model
+stored program concept
+program counter
+memory data register
+MDR
+memory access register
+MAR
+index register
+current instruction register
+CIR
+status register
+SR
+arithmetic and logic unit
+arithmetic & logic unit
+ALU
+control unit
+CU
+system clock
+address bus
+data bus
+control bus
+bus width
+clock speed
+
+Fetch-Decode-Execute cycle
+fetch-execute
+fetch-decode-execute
+register transfer
+interrupts
+interrupt
+
+The processor's instruction set
+jump instruction
+jump instructions
+immediate addressing
+direct addressing
+indirect addressing
+indexed addressing
+relative addressing
+
+Assembly language
+machine code
+assembly
+symbolic addressing
+absolute addressing
+directive
+directives
+macro
+macros
+two-pass assembler
+LDM
+LDD
+LDI
+LDX
+LDR
+STO
+ADD
+INC
+DEC
+JMP
+CMP
+JPE
+JPN
+IX
+ACC
+
+Operating System
+management tasks
+management task
+operating system
+program-hardware interface
+resource management
+memory management
+device management
+file management
+security management
+error detection and recovery
+
+Utility programs
+Disk formatter
+virus checker
+defragmenter software
+utility program
+utility programs
+disk contents analysis
+disk repair
+file compression software
+compression software
+backup software
+
+Library programs
+program libraries
+program library
+library files
+dynamic link library
+DLL
+library routines
+
+Language translators
+assembler software
+compiler
+interpreter
+partially compiled
+partially interpreted
+JVM
+java virtual machine
+
+Data security
+Security
+privacy
+security measures
+firewalls
+authentication methods
+passwords
+digital signatures
+digital signature
+data backup
+disk-mirroring
+disk mirroring
+encryption
+access rights
+access priveliges
+
+Data integrity
+error detection
+correction measures
+integrity of data
+data validation
+data verification
+verify
+parity check
+odd parity
+even parity
+parity bit
+parity bits
+checksum
+
+Ethics and the computing professional
+ethics
+impact
+computing professional
+ACM
+IEEE
+code of ethics
+software developer
+workplace
+code of conduct
+developer
+
+Ownership of software and data
+copyright
+ownership
+legislation
+free software foundation
+FSF
+open source initiative
+OSI
+shareware
+commercial software
+proprietary software
+
+Database Management Systems (DBMS)
+relational database
+data dictionary
+data management
+logical schema
+developer interface
+query processor
+database
+
+Relational database modelling
+entity
+tuple
+attribute
+primary key
+candidate key
+foreign key
+referential integrity
+secondary key
+indexing
+relational design
+entity-relationship
+entity relationship
+relationship diagram
+normal form
+third normal
+first normal
+second normal
+normalised
+
+Data Definition Language (DDL) and Data Manipulation Language (DML)
+DDL
+DML
+definition language
+manipulation language
+structured query language
+SQL
+SQL script
+CREATE DATABASE
+CREATE TABLE
+ALTER TABLE
+ADD PRIMARY KEY
+SELECT
+FROM
+WHERE
+ORDER BY
+GROUP BY
+INNER JOIN
+INSERT INTO
+DELETE FROM
+UPDATE
