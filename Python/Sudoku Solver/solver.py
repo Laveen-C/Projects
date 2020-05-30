@@ -47,7 +47,7 @@ def solve(): #Will do the actual backtracking to solve the sudoku
 
 if __name__ == "__main__":
     start = time.time() #Initial time before program starts
-    grid = create_grid("sampleSudoku3.txt") #Can be accessed from all functions
+    grid = create_grid("\\Users\lavee\OneDrive\Documents\GitHub\Projects\Python\Sudoku Solver\sampleSudoku3.txt") #Can be accessed from all functions
     solve()
     #Eventually we will go back to the first solve() call, which will just return and finish there
     print("No further solutions were found.")
