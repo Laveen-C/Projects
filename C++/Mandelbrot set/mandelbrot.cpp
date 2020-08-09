@@ -77,25 +77,54 @@ sf::Color HSVtoRGB(int H, double S, double V) {
     return sf::Color(output[0], output[1], output[2]);
 }
 
+void test(sf::VertexArray& plane)
+{
+    int k = 0;
+    for (int x = 0; x <= width; x++)
+    {
+        for (int y = 0; y <= height; y++)
+        {
+            plane[k].position = sf::Vector2f(x, y);
+            plane[k].color = sf::Color::Black;
+
+            if ((x + y) % 3 == 0)
+            {
+                plane[k].color = sf::Color::Green;
+            }
+            k++;
+        }
+    }
+}
+
 void generateMandelbrot(sf::VertexArray& plane) 
 {
 #pragma omp parallel for
-    for (double y = 0; y <= height; y += imInc)
+    int yCoord = -1;
+    int xCoord = -1;
+    int k = 0; //Index for the vertex array.
+    for (double y = minIm; y <= maxIm; y += imInc)
     {
-        for (double x = 0; x <= width; y += reInc)
+        yCoord++;
+        for (double x = minRe; x <= maxRe; x += reInc)
         {
-            //Convention: Real numbers are the 0th index, imaginary numbers are 1st index
-            int yCoord = floor(y);
-            int xCoord = floor(x);
+            std::cout << x << " + " << y << "i" << std::endl; //Debug print statement to check if the number is correct
+
+            xCoord++;
             complexNumber c;
-            c.re = x*reInc + minRe; //Real part of c
-            c.im = y*imInc + minIm; //Imaginary part of c
-            complexNumber zOld; //Z_n value
-            zOld.re = x*reInc + minRe; 
-            zOld.im = y*imInc + minIm;
+            c.re = x;
+            c.im = y;
+
+            complexNumber zOld;
+            zOld.re = c.re;
+            zOld.im = c.im;
+
             double modZ;
             complexNumber zNew;
-            sf::Color pixelColor = sf::Color(0,0,0);
+
+            sf::Color pixelColor = sf::Color(0,0,0); //By default set to black.
+            plane[k].position = sf::Vector2f(xCoord, yCoord); //We assign the co-ordinates beforehand because we know we have to draw this pixel
+
+            //Determining the colour
 
             for (int iter = 0; iter <= maxIter; iter++)
             {
@@ -106,15 +135,17 @@ void generateMandelbrot(sf::VertexArray& plane)
 
                 modZ = zNew.re * zNew.re + zNew.im * zNew.im;
 
-                if (modZ >= 4) //Divergence case ==> We need to colour the pixel appropriately
+                if (modZ >= 4) //Divergence case ==> We need to colour the pixel according to how fast it diverged
                 {
                     int hue = (((iter/maxIter) * 360) + 240) % 360; //Adding 240 to make it start on colour
                     sf::Color pixelColor = HSVtoRGB(hue, 255, 255);
-                    break;
+                    break; //We can leave the loop since we have now diverged.
                 }
-                plane[xCoord * width + yCoord].position = sf::Vector2f(xCoord, yCoord);
-                plane[xCoord * width + yCoord].color = pixelColor;  
-            }        
+
+            }
+
+            plane[k].color = pixelColor;
+            k++;
         }
     }
 }
@@ -123,12 +154,12 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(width, height), "Mandelbrot set explorer");
 
-    sf::VertexArray complexPlane(sf::Points, width * height);
+    sf::VertexArray complexPlane(sf::Points, width * height); // Creating an array of points, with width * height number of them.
 
     //Initial drawing to be done here
     window.clear();
     window.display();
-    generateMandelbrot(complexPlane);
+    test(complexPlane);
     //Event loop
     while (window.isOpen())
     {

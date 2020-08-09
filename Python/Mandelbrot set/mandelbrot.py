@@ -1,24 +1,3 @@
-"""
-import tkinter as tk
-
-#Global constants needed
-width = 900
-height = 600
-maxIter = 128
-
-#Range of values for the window
-minRe = -2
-maxRe = 1
-minIm = -1
-maxIm = 1 
-
-reInc = (maxRe - minRe)/width #Multiply by x-coord of pixel to get the increment to add to minRe
-imInc = (maxIm - minIm)/height #Multiply by y-coord of pixel to get the increment to add to minRe
-
-def main():
-    pass
-"""
-
 # Mandelbrot Fractal using Tkinter
 # FB36 - 20130706
 #For more info, read https://en.wikipedia.org/wiki/Mandelbrot_set
